@@ -96,6 +96,107 @@ int main(int argc, char *argv[]) {
 	porcen=cimp*100/cant;
 	printf("el porcentaje de los numeros imapares:%d",porcen);*/
 	
+//	9)
+	/*int anio,bisiesto;
+	printf("Ingrese un anio para ver si es bisiesto:");
+	scanf("%d",&anio);
+	
+	if(anio % 400 == 0 || anio % 4 == 0 && anio % 100 != 0){
+		printf("El anio %d es bisiesto",anio);
+	}else{
+		printf("El anio %d no es bisiesto",anio);
+	}*/
+	
+//	10)
+	/*int cua,ang;
+	printf("Ingrese el angulo de la linea:");
+	scanf("%d",&ang);
+	
+	if(ang>0 && ang<90){
+		
+		printf("El angulo pertece al cuadrante I");
+	
+	}else{
+		if(ang>90 && ang<180){
+		
+		printf("El angulo pertece al cuadrante II");	
+		
+		}else{
+			if(ang>180 && ang<270){
+				
+				printf("El angulo pertece al cuadrante III");
+			
+			}else{
+				if(ang>270 && ang<360){
+					
+					printf("El angulo pertece al cuadrante IV");
+					
+				}else{
+					if(ang==0 || ang==90 || ang==180 || ang==270){
+						
+						printf("La linea no reside en ningun cuadrante");
+						
+					}
+				}
+				
+			}
+		}
+	}*/
+	
+//	11)
+	int model,p,clase;
+	float monto;
+	
+	printf("ingrese el año modelo y peso:");
+	scanf("%d %d",&model,&p);
+	
+	if(model <= 2000 && p < 1000){
+		clase=1;
+		monto=2600.0f;
+		printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+	}else{
+		if(model <= 2000 && p > 1000 && p < 1500){
+			clase=2;
+			monto=3500.0f;
+			printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+		}else{
+			if(model <= 2000 && p > 1500){
+				clase=3;
+				monto=4560.70;
+				printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+			}else{
+				if(model <= 2001 && model >= 2009 && p < 1000){
+					clase=4;
+					monto=5300.45;
+					printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+				}else{
+					if(model <= 2001 && model >= 2009 && p > 1000 && p < 1500){
+						clase=5;
+						monto=6550.50;
+						printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+					}else{
+						if(model <= 2001 && model >= 2009 && p > 1500){
+							clase=6;
+							monto=7620.22;
+							printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+						}else{
+							if(model >= 2010 && p < 1500){
+								clase=7;
+								monto=8490.50;
+								printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+							}else{
+								if(model >= 2010 && p >1500){
+									clase=8;
+									monto=9620.50;
+									printf("Su clase de peso:%d \t Monto mensual:%.2f",clase,monto);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	
 	
