@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <limits.h>
+#include <ctype.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
@@ -144,7 +145,7 @@ int main(int argc, char *argv[]) {
 	}*/
 	
 //	11)
-	int model,p,clase;
+/*	int model,p,clase;
 	float monto;
 	
 	printf("ingrese el año modelo y peso:");
@@ -196,8 +197,61 @@ int main(int argc, char *argv[]) {
 				}
 			}
 		}
+	}*/
+	
+//	27)
+	char sexo,sexos;
+	int N,c,dni,dt,m=0,f=0,dnis=0,dts=0;
+	float sue,sumM=0,sumF=0,mays=INT_MIN,total=0,prom=0;
+	printf("Ingresar la cantidad de empleados:");
+	scanf("%d",&N);
+	
+	c=0;
+	while(c<N){
+		
+		printf("Ingrese DNI,Sexo,DT(dias trabajados) y sueldo:");
+		scanf("%d %c %d",&dni,&sexo,&dt);
+		
+		sexo=toupper(sexo);
+		sue=dt*300;
+		
+		switch(sexo){
+			case 'M':{
+				
+				sumM=(float)sumM+sue;
+				m++;
+				
+				break;
+			}
+			case 'F':{
+				if(dt<20){
+					f++;
+				}
+				sumF=(float)sumF+sue;
+				
+				break;
+			}
+		}
+		
+		if(sue>mays){
+			mays=sue;
+			dnis=dni;
+			sexos=sexo;
+			dts=dt;
+		}
+		total=(float)sumM+sumF;
+		c++;
 	}
 	
+	total=(float)sumM+sumF;	
+	prom=(float)sumM/m;
+	printf("\n La cantidad de empleadas mujeres que trabajaron menos de 20 dias:%d ",f);
+	printf("\n El sueldo promedio de los empleados varones:%f",prom);
+	printf("\n Los datos del empleado con el sueldo mas alto:");
+	printf("\n DNI:%d \t Sexo:%c \t DT(dias trabajados):%d",dnis,sexos,dts);
+	printf("\n El total que gasta la empresa en sueldos:%f",total);
+	printf("\n Lo que gasta la empresa en varones: %f",sumM);
+	printf("\n Lo que gasta la empresa en mujeres: %f",sumF);
 	
 	
 	return 0;
