@@ -8,6 +8,42 @@ int main(int argc, char *argv[]) {
 	/*Cristian Ibañez
 	DNI:45271489
 	ALDO*/	
+	//	1)
+	/*int num;
+	scanf("%d",&num);
+	
+	if(num % 2 == 0){
+	
+		printf("el numero %d es par!!",num);
+	}
+	else{
+	
+		printf("el numero %d no es par!! \n",num);
+	}*/
+//	2) (con tasa de interes compuesto)
+	/*int anios,c;
+	float monto, mtotal,interes;
+	printf("Ingrese la cantidad de dinero a depositar y la cantidad de años:");
+	scanf("%f %d",&monto,&anios);
+	
+	if(anios>=5){
+		for(c=1;c<=anios;c++){
+			monto=monto+(monto*0.25);
+			mtotal=monto;	
+		}
+		printf("Monto de Intereses: 25%\n");
+		printf("Monto Total con interes: %.2f",mtotal);
+	}	else{
+		
+			for(c=1;c<=anios;c++){
+				monto=monto+(monto*0.16);
+				mtotal=monto;	
+		}
+		printf("Monto de Intereses: 16%\n");
+		printf("Monto Total con interes: %.2f",mtotal);
+		}
+	*/
+//	7)
 	/*float num1,num2,R;
 	char op;
 	printf("Ingresa 2 numeros y el operador:");
@@ -198,18 +234,59 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}*/
+//	12)
+	/*int cod;
+	printf("Ingrese un codigo para saber la capacidad de un pendrive:");
+	scanf("%d",&cod);
+	
+	if(cod==1){
+		printf("\nSu capacidad es de: 2 GB\n");
+	}else{
+		if(cod==2){
+			printf("\nSu capacidad es de: 4 GB\n");	
+		}else{
+			if(cod==3){
+				printf("\nSu capacidad es de: 16 GB\n");
+			}else{
+				if(cod==4){
+					printf("\nSu capacidad es de: 32 GB\n");
+				}else{
+					printf("\nCodigo incorrecto\n");
+				}
+			}
+		}
+	}*/
+//	13)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
 	
 //	27)
-	char sexo,sexos;
-	int N,c,dni,dt,f=0,dnis=0,dts=0;
-	float m=0,sue,sumM=0,sumF=0,mays=INT_MIN,total=0,prom=0;
+	/*char sexo,sexos;
+	int N,c,dni,dt,m=0,f=0,dnis=0,dts=0;
+	float sue,sumM=0,sumF=0,mays=INT_MIN,total=0,prom=0;
 	printf("Ingresar la cantidad de empleados:");
 	scanf("%d",&N);
 	
 	c=0;
 	while(c<N){
 		
-		printf("Ingrese DNI,Sexo,DT(dias trabajados):");
+		printf("Ingrese DNI,Sexo,DT(dias trabajados) y sueldo:");
 		scanf("%d %c %d",&dni,&sexo,&dt);
 		
 		sexo=toupper(sexo);
@@ -242,19 +319,36 @@ int main(int argc, char *argv[]) {
 		total=(float)sumM+sumF;
 		c++;
 	}
-	if(m>0){
-		prom=(float)sumM/m;
-	}
 	
 	total=(float)sumM+sumF;	
-	
+	prom=(float)sumM/m;
 	printf("\n La cantidad de empleadas mujeres que trabajaron menos de 20 dias:%d ",f);
-	printf("\n El sueldo promedio de los empleados varones:%.2f",prom);
+	printf("\n El sueldo promedio de los empleados varones:%f",prom);
 	printf("\n Los datos del empleado con el sueldo mas alto:");
-	printf("\n DNI:%d \t Sexo:%c \t DT(dias trabajados):%d \t Sueldo:%.2f",dnis,sexos,dts,mays);
+	printf("\n DNI:%d \t Sexo:%c \t DT(dias trabajados):%d",dnis,sexos,dts);
 	printf("\n El total que gasta la empresa en sueldos:%f",total);
-	printf("\n Lo que gasta la empresa en varones: %.2f",sumM);
-	printf("\n Lo que gasta la empresa en mujeres: %.2f",sumF);
+	printf("\n Lo que gasta la empresa en varones: %f",sumM);
+	printf("\n Lo que gasta la empresa en mujeres: %f",sumF);
+	*/
+
+//	30)
+	int cod,N,dni,anioI,men=INT_MAX,c;
+	float promM,sue;
+	
+	printf("Cantidad de empleados:");
+	scanf("%d",&N);
+	
+	for(c=0;c<N;c++){
+		printf("Ingrese el cod de sucursal:");
+		scanf("%d",&cod);
+		printf("Ingrese el DNI, sueldo y año de ingreso a la empresa:");
+		scanf("%d %f %d",&dni,&sue,&anioI);
+}
+	 	
+		
+	
+	
+	
 	
 	
 	return 0;
