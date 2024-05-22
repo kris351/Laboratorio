@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <ctype.h>
+
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
@@ -256,7 +257,16 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}*/
-//	13)
+//	14)
+	/*int num=1,c;
+	
+	for(c=0;c<50;c++){
+		
+		if(num % 2 == 0){
+			printf("%d-",num);
+		}
+		num++;
+	}*/
 	
 	
 	
@@ -332,21 +342,152 @@ int main(int argc, char *argv[]) {
 	*/
 
 //	30)
-	int cod,N,dni,anioI,men=INT_MAX,c;
-	float promM,sue;
+	/*int cod,cod_men=0,emp=0,N,e,c,dni,anio_ingreso,cant_emp=0,antiguedad=0;
+	float sum=0.0f,sue,prom=0.0f,prom_men=0.0f,men=INT_MAX;
 	
-	printf("Cantidad de empleados:");
+	printf("Ingrese la cantidad de empleados:");
 	scanf("%d",&N);
 	
-	for(c=0;c<N;c++){
-		printf("Ingrese el cod de sucursal:");
+	c=1;
+	while(c<=3){
+		printf("Ingrese el codigo de sucursal:");
 		scanf("%d",&cod);
-		printf("Ingrese el DNI, sueldo y año de ingreso a la empresa:");
-		scanf("%d %f %d",&dni,&sue,&anioI);
-}
-	 	
 		
+		
+		sum=0;
+		e=0;
+		while(e<N){
+			
+			printf("Ingrese DNI,sueldo y anio de ingreso: ");
+			scanf("%d %f %d",&dni,&sue,&anio_ingreso);
+			
+			sum=(float)sum+sue;
+			emp++;
+			antiguedad=2024-anio_ingreso;
+			
+			if(antiguedad >= 15 && antiguedad < 25 ){
+				cant_emp++;
+			}
+			e++;	
+		}
+		
+		if(emp=1){
+			prom=(float)sum/emp;
+		}
+		
+		
+		printf("suc:%d \t prom:%f \n",c,prom);
+		
+		if(prom < men){
+			men=prom;
+			cod_men=cod;
+		}
+		
+		c++;
+	}
 	
+	printf("el codigo de sucursal con menor promedio de sueldo:%d\n",cod_men);
+	printf("Cantidad de empleados que tengan antiguedad >= 15 anios y < a 25 anios:%d",cant_emp);
+	printf("\n %f",prom_men);*/
+	
+//	30.1)
+	int c,suc,e,N,dni,anio_ingreso,antiguedad=0,cant_emp=0,emp=0,sucM=0;
+	float sue,sum,prom=0.0f,men=INT_MAX;	 	
+	
+	for(c=1;c<=3;c++){
+		
+		printf("suc:");
+		scanf("%d",&suc);
+		
+		
+		switch(suc){
+			
+			case 1:{
+				sum=0.0f;
+				printf("cantemp:");
+				scanf("%d",&N);
+				
+				for(e=1;e<=N;e++){
+					
+					printf("dni,sue,anio_ingreso:");
+					scanf("%d %f %d",&dni,&sue,&anio_ingreso);
+					
+					sum=sum+sue;
+					emp++;
+				}
+				if(antiguedad >= 15 && antiguedad < 25 ){
+					cant_emp++;
+				}
+				
+				if(emp=1){
+					prom=sum;
+				}else{
+					prom=sum/emp;
+				}
+				
+				break;		
+			}
+			
+			case 2:{
+				sum=0.0f;
+				printf("cantemp:");
+				scanf("%d",&N);
+				for(e=1;e<=N;e++){
+					
+					printf("dni,sue,anio_ingreso:");
+					scanf("%d %f %d",&dni,&sue,&anio_ingreso);
+					
+					sum=sum+sue;
+					emp++;
+					antiguedad=2024-anio_ingreso;
+					
+					if(antiguedad >= 15 && antiguedad < 25 ){
+						cant_emp++;
+					}
+				}
+				if(emp=1){
+					prom=sum;
+				}else{
+					prom=sum/emp;
+				}
+				break;
+			}
+			
+			case 3:{
+				sum=0.0f;
+				printf("cantemp:");
+				scanf("%d",&N);
+				
+				for(e=1;e<=N;e++){
+					
+					printf("dni,sue,anio_ingreso:");
+					scanf("%d %f %d",&dni,&sue,&anio_ingreso);
+					
+					sum=sum+sue;
+					emp++;
+					
+					if(antiguedad >= 15 && antiguedad < 25 ){
+						cant_emp++;
+					}
+				}
+				if(emp=1){
+					prom=sum;
+				}else{
+					prom=sum/emp;
+				}
+				break;
+			}
+		}
+		
+		if(prom<men){
+			men=prom;
+			sucM=suc;
+		}
+		
+	}
+	
+	printf("\n prom menor sueldos:%d \n",sucM);
+	printf("\ncant. emp:%d",cant_emp);
 	
 	
 	
