@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <ctype.h>
+#include <math.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -267,25 +268,200 @@ int main(int argc, char *argv[]) {
 		}
 		num++;
 	}*/
+//	15)
+	/*int num,c,aux=0;
+	
+	printf("Ingrese un numero para saber su tabla de multiplicar:");
+	scanf("%d",&num);
+	
+	if(num>0){
+		
+		for(c=1;c<=10;c++){
+			
+			aux=aux+num;
+			
+			printf("%d * %d = %d\n",c,num,aux);
+		}
+	}*/
+//	16)
+/*	int num,c,aux=0;
+	
+	printf("Ingrese un nuero entero positivo para saber su tabla de multiplicar:");
+	scanf("%d",&num);
+		
+	if(num>0){
+		
+		for(c=1;c<=10;c++){
+			
+			aux=aux+num;
+			
+			printf("%d * %d = %d\n",c,num,aux);
+		}
+	}else{
+		printf("\nNo es un numero entero...\n");
+	}*/
+//	17)
+	/*int c;
+	float pesos,dolar=1.0f,aux;
+	
+	printf("Ingrese la cotizacion del dolar del dia:");
+	scanf("%f",&pesos);
+	
+	printf("Cantidad de Dolares \t Cotizacion en Pesos\n");
+	printf("_____________________________________________\n");
+	
+	for(c=1;c<=6;c++){
+		aux=pesos*dolar;
+		
+		printf("%.0f \t \t \t %.2f\n",dolar,aux);
+		dolar=dolar*10.0f;
+	}*/
+//	18)
+	/*int num_ant,c,num=12;
+	
+	printf("%d-",num);
+	
+	for(c=0;c<19;c++){
+		
+		num=(num-1)*3+3;
+		
+		printf("%d-",num);
+	}*/
+//	19)
+	/*int N,c,men=INT_MAX,num,may=INT_MIN;
+	printf("Ingrese una serie de numeros:");
+	scanf("%d",&N);
 	
 	
+	for(c=1;c<=N;c++){
+		
+		printf("Numero %d: ",c);
+		scanf("%d",&num);
+		
+		if(num<men){
+			men=num;
+		}
+		if(num>may){
+			may=num;
+		}
+	}
 	
+	printf("\nNumero menor: %d\n",men);
+	printf("Numero mayor: %d",may);*/
+//	20)
+	/*int i,vocales=0,N;
+	char c;
+	printf("Ingrese una cantidad de caracteres:");
+	scanf(" %d",&N);
 	
+	for(i=0;i<N;i++){
+		
+		printf("Ingrese una serie de caracteres:");
+		scanf(" %c",&c);
+		
+		c=tolower(c);
+		
+		if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
+			vocales++;
+		}
+	}
+	if(vocales>0){
+		
+		printf("La cantidad de Vocales: %d",vocales);
+		
+	}else{
+		
+		printf("\nNo se ingresaron vocales...\n");
+	}*/
+//	21)
+	/*int num;
+	float porc,N,impar=0,c=0.0f;;	
 	
+	do{
+		printf("Numero: ");
+		scanf("%d",&num);
+		
+		if(num % 2 != 0 && num != 0){
+			impar++;
+		}
+		c++;
+	}while(num!=0);
 	
+	c--;
+	porc=(impar*100)/c;
 	
+	printf("El porcentaje de los numeros impares:%f",porc);
+	*/
+//	22)
+	/*int num,num_inv=0,digito;
 	
+	printf("Ingrese un numero para invertirlo:");
+	scanf("%d",&num);
 	
+	while(num > 0){
+		digito=num%10;
+		num_inv=num_inv*10+digito;
+		num=num/10;
+	}
 	
+	printf("Numero invertido: %d",num_inv);*/
+//	23)
+	/*int div=0,num,resto=0,c;
 	
+	printf("Ingrese un numero para saber la cantidad de divisores: ");
+	scanf(" %d",&num);
 	
+	for(c=1;c<=num;c++){
+		resto=num%c;
+		
+		if(resto==0){
+			div++;
+		}
+	}
+	
+	if(div>2){
+		printf("\nEl numero tiene %d divisores\n",div);
+	}else{
+		printf("\nEl numero es primo\n");
+	}*/
+//	24)
+	/*int num,fac,c=1,i;
+	
+	while(c==1){
+		printf("\nIngrese un numero para su factorial: ");
+		scanf("%d",&num);
+	
+		if(num<10){
+			
+			i=1;
+			fac=1;
+			for(i=1;i<=num;i++){
+				fac=fac*i;
+			}
+			printf("el factorial de %d es: %d\n",num,fac);
+			c=0;
+		}else{
+			c=1;
+			printf("\nIngrese un numero de 1 digito...\n");
+		}
+		
+	}*/
+//	25)
+	/*int n1,n2,c,sum=0,aux=0;
+	
+	printf("Ingrese un par de numeros: ");
+	scanf("%d %d",&n1,&n2);
+	
+	for(c=0;c<n2;c++){
+		
+		sum=sum+n1;
+	}
+	
+	printf("\nSu producto: %d",sum);*/
+
+//	26)Ya lo habia hecho xd
 
 
-	
-	
-	
-	
-	
 //	27)
 	/*char sexo,sexos;
 	int N,c,dni,dt,m=0,f=0,dnis=0,dts=0;
@@ -340,19 +516,64 @@ int main(int argc, char *argv[]) {
 	printf("\n Lo que gasta la empresa en varones: %f",sumM);
 	printf("\n Lo que gasta la empresa en mujeres: %f",sumF);
 	*/
+//	28)
+	/*int N,boletas,impuesto,sum,c,i;
+	
+	printf("\nIngrese la cantidad de personas: ");
+	scanf("%d",&N);
+	
+	for(c=1;c<=N;c++){
+		
+		printf("\nIngrese la cantidad de boletas a pagar de la persona %d: ",c);
+		scanf("%d",&boletas);
+		sum=0;
+		for(i=1;i<=boletas;i++){
+			printf("Ingrese el impuesto de la boleta %d de la persona %d: ",i,c);
+			scanf("%d",&impuesto);
+		
+			sum=sum+impuesto;
+		
+		}
+		printf("\nEl total de impuestos a pagar de la persona %d es: %d\n",c,sum);
+	}*/
+//	29)
+	/*int cod_contribuyente,N,cod,c,i;
+	float ingreso_anual,may_ingreso=INT_MIN,may_ingreso_anual=INT_MIN,Ingreso;
+	printf("\nIngrese la cantidad de contribuyentes: ");
+	scanf(" %d",&N);
+	
+	for(c=1;c<=N;c++){
+		printf("\nIngrese el codigo de contribuyente: ");
+		scanf(" %d",&cod);
+		printf("\nIngrese el ingreso mensual: ");
+		scanf(" %f",&Ingreso);
+		
+		ingreso_anual=Ingreso*12;
+		
+		if(may_ingreso<Ingreso){
+			may_ingreso=Ingreso;
+		}
+		if(may_ingreso_anual<ingreso_anual){
+			may_ingreso_anual=ingreso_anual;
+			cod_contribuyente=cod;
+		}
+	}
+	printf("\nEl mayor ingreso mensual: %f",may_ingreso);
+	printf("\nEl cod del ingreso anual mayor: %d",cod_contribuyente);
+	*/
 
 //	30)
 	/*int cod,cod_men=0,emp=0,N,e,c,dni,anio_ingreso,cant_emp=0,antiguedad=0;
 	float sum=0.0f,sue,prom=0.0f,prom_men=0.0f,men=INT_MAX;
 	
-	printf("Ingrese la cantidad de empleados:");
-	scanf("%d",&N);
+	
 	
 	c=1;
 	while(c<=3){
 		printf("Ingrese el codigo de sucursal:");
 		scanf("%d",&cod);
-		
+		printf("Ingrese la cantidad de empleados:");
+		scanf("%d",&N);
 		
 		sum=0;
 		e=0;
@@ -375,9 +596,6 @@ int main(int argc, char *argv[]) {
 			prom=(float)sum/emp;
 		}
 		
-		
-		printf("suc:%d \t prom:%f \n",c,prom);
-		
 		if(prom < men){
 			men=prom;
 			cod_men=cod;
@@ -387,11 +605,10 @@ int main(int argc, char *argv[]) {
 	}
 	
 	printf("el codigo de sucursal con menor promedio de sueldo:%d\n",cod_men);
-	printf("Cantidad de empleados que tengan antiguedad >= 15 anios y < a 25 anios:%d",cant_emp);
-	printf("\n %f",prom_men);*/
+	printf("Cantidad de empleados que tengan antiguedad >= 15 anios y < a 25 anios:%d",cant_emp);*/
 	
 //	30.1)
-	int c,suc,e,N,dni,anio_ingreso,antiguedad=0,cant_emp=0,emp=0,sucM=0;
+	/*int c,suc,e,N,dni,anio_ingreso,antiguedad=0,cant_emp=0,emp=0,sucM=0;
 	float sue,sum,prom=0.0f,men=INT_MAX;	 	
 	
 	for(c=1;c<=3;c++){
@@ -414,9 +631,11 @@ int main(int argc, char *argv[]) {
 					
 					sum=sum+sue;
 					emp++;
-				}
-				if(antiguedad >= 15 && antiguedad < 25 ){
-					cant_emp++;
+					antiguedad=2024-anio_ingreso;
+					
+					if(antiguedad >= 15 && antiguedad < 25 ){
+						cant_emp++;
+					}
 				}
 				
 				if(emp=1){
@@ -465,6 +684,7 @@ int main(int argc, char *argv[]) {
 					
 					sum=sum+sue;
 					emp++;
+					antiguedad=2024-anio_ingreso;
 					
 					if(antiguedad >= 15 && antiguedad < 25 ){
 						cant_emp++;
@@ -486,8 +706,72 @@ int main(int argc, char *argv[]) {
 		
 	}
 	
-	printf("\n prom menor sueldos:%d \n",sucM);
-	printf("\ncant. emp:%d",cant_emp);
+	printf("\nSucursal con el promedio menor de sueldos: %d \n",sucM);
+	printf("\ncant. empleados con antiguedad >= 15 y < 25: %d",cant_emp);
+	*/
+//	31)
+	/*int N,cod,rating_anual,c,i,sum=0,cant_rating;
+	float prom=0,pol=0;
+	char tipo;
+	
+	printf("\nIngrese la cantidad de programas: ");
+	scanf(" %d",&N);
+	
+	for(c=1;c<=N;c++){
+		printf("\nPrograma %d",c);
+		printf("\nCodigo de programa: ");
+		scanf(" %d",&cod);
+		printf("\nTipo de programa(P-politico, I-interes general, N-noticiero):");
+		scanf(" %c",&tipo);
+		printf("\nTotal de rating en el año 2016: ");
+		scanf(" %d",&rating_anual);
+		
+		tipo=toupper(tipo);
+		
+		
+		switch(tipo){
+			case 'P':{
+				sum=sum+rating_anual;
+				pol++;
+				break;
+			}
+			case 'I':{
+				if(rating_anual>8){
+					cant_rating++;
+				}
+				break;
+			}
+			case 'N':{
+				
+				break;
+			}
+		}
+	
+	}
+	prom=sum/pol;
+	printf("\nCantidad de programas de interes general con mas de 8 puntos de rating: %d",cant_rating);
+	printf("\nEl promedio de rating de los programas politcos: %.2f\n",prom);*/
+	
+//	32)
+	/*int N,P,c,i;
+	float sum=0,precio;
+	
+	printf("\nIngrese la cantidad de clientes: ");
+	scanf(" %d",&N);
+	
+	for(c=1;c<=N;c++){
+		printf("\nIngrese la cantidad de productos del cliente %d: ",N);
+		scanf(" %d",&P);
+		for(i=1;i<=P;i++){
+			printf("\nIngrese el precio del producto %d:",i);
+			scanf(" %f",&precio);
+			
+			sum=sum+precio;
+		}
+	}
+	printf("\nEl monto recaudado: %.2f",sum);
+	*/
+	
 	
 	
 	
